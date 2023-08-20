@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <div id="logo">
+      <img src="logo/logo.png" alt="AluraLatam">
+    </div>
+    <div id="input-area">
+      <textarea id="text-input" minlength="1" rows="" cols="" placeholder="Ingrese texto a encriptar"></textarea>
+    </div>
+    <div id="buttons">
+      <p><span class="material-icons-outlined">error</span> Solo letras minúsculas y sin acentos</p>
+      <button id="encriptar" class="btn" onclick="encriptar()">Encriptar</button>
+      <button id="desencriptar" class="btn" onclick="desencriptar()" >Desencriptar</button>
+    </div>
+    <div class="side-bar">
+      <div id="box">
+        <div id="noinput">
+          <p><b>Ningun mensaje fue encontrado</b></p>
+          <p>Ingresa el texto que desees encriptar o desencriptar</p>
+        </div>
+        <p id="output-text"></p>
+        <div>
+          <button id="copiar" class="btn" onclick="copiarTexto()" >Copiar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <footer>
+    <p>Creado por Michael Nuñez</p>
+  </footer>
+</body>
+
+</html>

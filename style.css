@@ -1,0 +1,202 @@
+:root{
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 1.2rem;
+  --card-padding:1.8rem;
+  --padding-1:1.2rem;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: 0;
+  border: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: #F3F5FC;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: auto;
+  grid-template-rows: 0.5fr 1.5fr 1.5fr 1.5fr;
+  grid-template-areas: 
+    "logo"
+    "input-area"
+    "buttons"
+    "side-bar";
+  grid-gap: 0.2rem;
+}
+
+#logo {
+  grid-area: logo;
+  padding: var(--padding-1);
+}
+#logo img {max-width: 30%;}
+
+#input-area {
+  grid-area: input-area;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+textarea {
+  resize: none;
+  width: 90%;
+  height: 90%;
+  background-color: transparent;
+  border: 2px dashed grey;
+  border-radius: var(--border-radius-2);
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+/* Inicio seccion de estilos de Div buttons, contiene los dos botones y el aviso de minusculas */
+
+#buttons {
+  grid-area: buttons;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+#buttons p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+.material-icons-outlined{ font-size: 0.8rem !important; }
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
+  text-align: center;
+  border: 0;
+  border-radius: var(--border-radius-2);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 600;
+  min-height: 70px;
+  width: 60%;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#encriptar {
+    background-color: #0A66C2;
+}
+
+#desencriptar {
+  background-color: transparent;
+  border: 1px solid #0A66C2;
+  color: black;
+}
+
+#desencriptar:hover,
+#desencriptar:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+#encriptar:hover,
+#encriptar:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+.btn:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.btn:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+
+/* Fin de seccion de buttons*/
+
+.side-bar {
+  grid-area: side-bar;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-bar #box {
+  height: 90%;
+  width: 90%;
+  min-height: 150px;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0px 10px 20px -5px #BCA98D;
+  overflow: auto;
+  padding: 1.5rem;
+  border-radius: var(--border-radius-2);
+  font-size: 1.5rem;
+}
+
+#output-text {display: none;}
+#noinput {display: block;}
+
+footer {
+  text-align: center;
+  font-size: 10px;
+}
+
+@media screen and (min-width: 500px) {
+  #buttons {
+    grid-area: buttons;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+      "p p"
+      "btn1 btn2";
+  }
+  #buttons p {grid-area: p;}
+  #encriptar {grid-area: btn1; width: 70%; }
+  #desencriptar {grid-area: btn2; width: 70%;}
+  #logo img {max-width: 15%;}
+}
+
+@media screen and (min-width: 1080px) {
+  .container {
+    grid-template-columns: 0.5fr 3fr 2fr;
+    grid-template-rows: 0.5fr 1.5fr 1fr 1.5fr;
+    grid-template-areas: 
+      "logo . side-bar"
+      "logo input-area side-bar"
+      "logo input-area side-bar"
+      "logo buttons side-bar";
+  }
+  #logo img {max-width: 80%;}
+  #encriptar {width: 80%; height: 70%; }
+  #desencriptar {width: 80%; height: 70%;}
+}
