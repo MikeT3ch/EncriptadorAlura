@@ -82,3 +82,4 @@ function activeCopy() {
   copyBtn.style.display = 'block';
   console.log("Se ha activado el boton copiar")
 }
+
