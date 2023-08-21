@@ -36,7 +36,8 @@ function encriptar() {
   resultadoArea.textContent = textoEncriptado;
   resultadoArea.style.display = 'block';
   vacio.style.display = 'none';
-  console.log("Hecho")
+  console.log("Hecho");
+  activeCopy();
 }
 
 function desencriptar() {
@@ -54,7 +55,8 @@ function desencriptar() {
   resultadoArea.textContent = textoEncriptado;
   resultadoArea.style.display = 'block';
   vacio.style.display = 'none';
-  console.log("Hecho")
+  console.log("Hecho");
+  activeCopy();
 }
 
 
@@ -73,6 +75,10 @@ function copiarTexto() {
       console.log("Error al copiar");
     },
   );
+}
 
-  alert("Se ha copiado el texto: " + texto);
+function activeCopy() {
+  let copyBtn = document.getElementById('CopyBtn');
+  copyBtn.style.display = 'block';
+  console.log("Se ha activado el boton copiar")
 }
