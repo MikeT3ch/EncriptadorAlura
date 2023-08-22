@@ -19,6 +19,8 @@ La encriptación aplica para las vocales y consiste en reemplazar cada ocurrenci
 ## TODO
 
 - [ ] Agregar una apropiada descripcion al proyecto de GitHub.
+- [ ] Agregar Icon para el titulo de la pagina web.
+- [ ] Agregar un titulo a la pagina web.
 - [ ] Agregar tooltip al boton de copiar, extra para los demas botones.
 - [x] Agregar un boton para copiar el resultado de la encriptación.
 - [ ] Cambiar diseño o mejorar el que ya está.
