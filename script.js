@@ -2,7 +2,7 @@ function validarTexto() {
   var input = document.getElementById('text-input').value;
   var textoValidado = quitarTildes(input);
 
-  if (/[^a-zA-Z0-9,.\s]/.test(textoValidado)) {
+  if (/[^a-zA-Z0-9ñÑ,.\s]/.test(textoValidado)) {
     alert("Solo se aceptan letras sin tildes y números.")
     return false;
   } else {
